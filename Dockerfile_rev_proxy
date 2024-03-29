@@ -1,0 +1,6 @@
+FROM nginx:1.21.1
+COPY docker/reverse-proxy/nginx.conf.template /etc/nginx/conf.d/default.conf.template
+COPY docker/reverse-proxy/docker-entrypoint.sh /
+RUN chmod 750 docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]

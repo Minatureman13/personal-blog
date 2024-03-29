@@ -1,0 +1,25 @@
+version: '3.8'
+
+services: 
+
+  app:
+    container_name: app
+    restart: unless-stopped
+    image: canopy-node    
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    environment:
+      URL: localhost:8081
+      DB_HOST: 
+      DB_DATABASE: 
+      DB_USER: 
+      DB_PASSW: 
+      DB_CONNECTION_LIMIT: 3
+      EMAIL_USER: 
+      EMAIL_PASSW: 
+      EMAIL_SECRET_KEY: 
+      NODE_ENV: dev
+      PORT: 8081
+    ports:
+      - "8081:8081"

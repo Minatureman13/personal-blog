@@ -1,0 +1,27 @@
+{
+  "name": "express-handlebars-advanced-example",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Kenneth Huebsch",
+  "license": "BSD",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "env-var": "^7.0.1",
+    "express": "^4.7.2",
+    "fs": "0.0.1-security",
+    "glob": "^7.1.2",
+    "graceful-fs": "^4.1.11",
+    "handlebars": "^4.7.7",
+    "mysql": "^2.15.0",
+    "nodemailer": "^4.6.4",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0"
+  }
+}

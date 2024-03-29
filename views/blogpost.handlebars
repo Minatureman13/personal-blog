@@ -1,0 +1,53 @@
+{{#section 'head'}}
+    <!-- Custom CSS -->
+    <link href="/assets/css/clean-blog.css" rel="stylesheet">
+{{/section}}
+
+<!-- Navigation -->
+{{> page/nav/nav}}
+
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<span itemscope itemtype="http://schema.org/BlogPosting">
+<header class="intro-header blog-pic" style="background-image: url('{{blogpost.BACKGROUNDIMGURL}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="post-heading">
+                    <h1 itemprop="headline">{{blogpost.TITLE}}</h1>
+                    <h2 itemprop="alternativeHeadline" class="subheading">{{blogpost.SUBTITLE}}</h2>
+                    <span class="meta">Posted by <span itemprop="author">{{blogpost.AUTHOR}}</span> on <span itemprop="datePublished">{{blogpost.DATE}}</span></span>
+                    <span itemtype="https://schema.org/Organization" itemscope="itemscope" itemprop="publisher" >
+                        <meta itemprop="name" content="{{getSiteName}}"/>
+                        <span itemtype="https://schema.org/ImageObject" itemscope="itemscope" itemprop="logo" >
+                            <meta content="{{getSiteUrl}}/img/canopy_logo.png"/ itemprop="url" />
+                        </span>
+                    </span>
+                    <meta itemprop="image" content="{{getSiteUrl}}{{blogpost.BACKGROUNDIMGURL}}"/>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <!-- Latest Blog Posts -->
+        {{> page/sidebar}}
+
+        <div class="col-md-9">
+            <h4 class="margin-bottom">
+                <strong>Categories:</strong> {{#each categories}}<a href="/category/{{this}}">{{this}}</a>&nbsp;&nbsp;{{/each}}
+            </h4>
+            <div itemprop="articleBody">
+                {{{blogpost.FULLPOST}}}
+            </div>
+        </div>
+    </div><!-- /Row-->
+</div><!-- /Page Content -->
+</span>
+
+<!-- Footer Content-->
+{{> page/footer}}

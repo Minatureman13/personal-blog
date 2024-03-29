@@ -1,0 +1,17 @@
+<!-- clickable subcategory table -->
+<div>
+    <table class="table table-hover" id="clickable-container">
+        <tbody>
+            {{#each subcategories}}
+                <tr class="clickable-row" data-url="{{../subpage}}{{this.ID}}">
+                    <td class="col-sm-4">
+                        <img class="img-rounded img-comparison" src="{{this.IMG}}">
+                    </td>
+                    <td>
+                        <h4>{{this.DISPLAYNAME}}</h4>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

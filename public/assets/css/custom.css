@@ -1,0 +1,421 @@
+/* bootstrap overrides */
+.navbar-brand-index {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.navbar-brand-index > img {
+  display: block;
+}
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand-index,
+  .navbar > .container-fluid .navbar-brand-index {
+    margin-left: -15px;
+  }
+}
+.navbar-inverse .navbar-brand-index {
+  color: #9d9d9d;
+}
+.hidden-link{
+  text-decoration: none;
+  color: inherit;
+}
+.hidden-link:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+    font-family: "Montserrat";
+}
+
+/* Custom images sizes for index page, comparison table */
+/* xs */
+
+.intro-margin {
+    margin-bottom: 10px;
+}
+
+.full-width {
+    max-width: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.no-margin{
+    margin: 0px;
+}
+
+.height-25 {
+    height: 25px;
+}
+
+.height-100 {
+    height: 100px;
+}
+
+.no-decor {
+    text-decoration: none;
+}
+.no-decor:hover{
+    text-decoration: none;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+.img-comparison {
+    width: 100px;
+    height: auto;
+}
+.grey-title{
+  color: #696969;
+}
+
+.amzbutton{
+  height: 30px;
+}
+/* sm or larger */
+@media (min-width: 768px) {
+    .img-comparison {
+        width: 140px;
+    }
+}
+
+/*Icon colors*/
+.fa-check-circle {
+  color: green;
+}
+.fa-warning {
+  color: darkgoldenrod;
+}
+.fa-rocket {
+  color: darkblue;
+}
+
+/*override boarders for thumbnails*/
+.no-border{
+  border: none;
+}
+
+/*START SIDEBAR*/
+body {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    border-radius: 4px;
+}
+
+#sidebar-wrapper-blog {
+    margin-left: -25px;
+    display: none;
+}
+
+.sidebar-nav {
+    position: absolute;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #222;
+    background: #d4e1f7;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand span {
+    color: #101010;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:992px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 260px;
+    }
+
+    #sidebar-wrapper-blog{
+        display: block;
+        width: 268px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+/*END SIDEBAR*/
+
+/*social-icons.css*/
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #222;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #222;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-google-plus {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #222;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+/*Social media icons into a div*/
+.a-social{
+  position: relative;
+  display: inline-block;
+  padding: 10px 0px 10px 0px;
+  color: #9d9d9d;
+}
+
+.a-social:hover,
+.a-social:focus {
+  color: #eee;
+}
+
+/*Buying Guide*/
+
+/*Remove bullets from table lists*/
+.no-bullets{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+/*Navbar logo*/
+.nav-logo{
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 2px;
+}
+
+/*Anything medium or bigger*/
+@media (min-width: 992px) {
+    .nav-logo{
+        height: 50px;
+        padding-top: 2px;
+        padding-left: 2px;
+    }
+}
+
+/*Click anywhere to read full review!*/
+.click-here{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    color: red;
+}
+/*End Click here to see beach tents*/
+
+/*footer links*/
+.footer-links{
+    padding-right: 10px;
+}
+
+/*make jumbotron h1 text smaller*/
+@media screen and (min-width: 768px){
+    .jumbotron .h1, .jumbotron h1 {
+        font-size: 45px;
+    }
+}
+
+/*background image for index page*/
+.home-pic {
+    background-image: url('/img/background.jpg');
+}
+
+/*See latest prices*/
+.see-latest-prices {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/*amazon button*/
+.amazon-badge{
+    height: 55px;
+}
+
+/*HR*/
+hr.pretty-hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.pretty-hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+/*footer*/
+.no-padding{
+    padding: 0px;
+}
+
+@media screen and (max-width: 768px){
+    .small-centered{
+        margin: 0 auto;
+    }
+}
+
+/*decorate links in comparison table short review*/
+.table.rowlink td:not(.rowlink-skip) a, .table .rowlink td:not(.rowlink-skip) a.text-decor {
+    color: #337ab7;
+}
+.table.rowlink td:not(.rowlink-skip) a, .table .rowlink td:not(.rowlink-skip) a.text-decor:hover {
+    text-decoration: underline;
+}
+
+.margin-10{
+    margin: 10px;
+}
+
+/*anything bigger than small*/
+@media (min-width: 768px) {
+    .vertical-align {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*Override Jasny cursor*/
+.table.rowlink td:not(.rowlink-skip),.table .rowlink td:not(.rowlink-skip){
+    cursor:alias;
+}
+
+/* Sticky footer styles*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.blog-img{
+    max-height: 400px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#success_message {
+    display: none;
+}
+
+/*blog post lists*/
+.center-cropped {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 50px;
+    width: 100px;
+  }
+
+.nav > li > a.no-padding{
+    padding: 0;
+}
+
+/*best tent type*/
+.best-pick{
+    font-weight: bold;
+    color:#337ab7;
+}
+
+.min-height-500 {
+    min-height: 500px;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px;
+}
+
+.font-size-14{
+    font-size: 14px;
+}
+
+.blog-img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}

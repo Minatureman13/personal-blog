@@ -1,0 +1,15 @@
+<RoutingRules>
+	<RoutingRule>
+		<Condition>
+			<KeyPrefixEquals>main.html</KeyPrefixEquals>
+		</Condition>
+		<Redirect>
+			<Protocol>https</Protocol>
+			<HostName>canopytentreviews.com</HostName>
+			<ReplaceKeyWith>best-beach-tents</ReplaceKeyWith>
+			<HttpRedirectCode>301</HttpRedirectCode>
+		</Redirect>
+	</RoutingRule>
+</RoutingRules>
+
+www.hotelmanglares.com.mx/main.html

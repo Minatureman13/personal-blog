@@ -1,0 +1,250 @@
+{{#section 'head'}}
+    <!-- Custom JavaScript -->
+    <script src="/assets/js/validator.js"></script>
+
+    <!--Google Recaptcha API-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+{{/section}}
+
+<!-- Navigation -->
+{{> page/nav/nav}}
+
+
+<!--Form-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+            {{#ifCond status 'success'}}
+                <div class="alert alert-success" role="alert">
+                    Thank you! Your message was sent successfully.
+                </div>
+            {{/ifCond}}
+            {{#ifCond status 'failure'}}
+                <div class="alert alert-danger" role="alert">
+                    Sorry. We ran into some kind of an error while trying to send your message. Please try again in a few minutes.
+                </div>
+            {{/ifCond}}
+            {{#orCond status 'new' 'failure'}}
+            <form class="well form-horizontal" action="/submit-message" method="post" id="contact_form" data-toggle="validator">
+                <fieldset>
+                    <!-- Form Name -->
+                    <legend>Contact Us!</legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">First Name</label>
+                        <div class="col-md-9 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input name="first_name" required placeholder="First Name" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Last Name</label>
+                        <div class="col-md-9 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input name="last_name" required placeholder="Last Name" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">E-Mail</label>
+                        <div class="col-md-9 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-envelope"></i>
+                                </span>
+                                <input name="email" required placeholder="E-Mail Address" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">City</label>
+                        <div class="col-md-9 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-home"></i>
+                                </span>
+                                <input name="city" placeholder="city" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">State</label>
+                        <div class="col-md-9 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-list"></i>
+                                </span>
+                                <select name="state" class="form-control selectpicker">
+                                    <option value=" ">Please select your state</option>
+                                    <option>Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>Arizona</option>
+                                    <option>Arkansas</option>
+                                    <option>California</option>
+                                    <option>Colorado</option>
+                                    <option>Connecticut</option>
+                                    <option>Delaware</option>
+                                    <option>District of Columbia</option>
+                                    <option>Florida</option>
+                                    <option>Georgia</option>
+                                    <option>Hawaii</option>
+                                    <option>Idaho</option>
+                                    <option>Illinois</option>
+                                    <option>Indiana</option>
+                                    <option>Iowa</option>
+                                    <option>Kansas</option>
+                                    <option>Kentucky</option>
+                                    <option>Louisiana</option>
+                                    <option>Maine</option>
+                                    <option>Maryland</option>
+                                    <option>Mass</option>
+                                    <option>Michigan</option>
+                                    <option>Minnesota</option>
+                                    <option>Mississippi</option>
+                                    <option>Missouri</option>
+                                    <option>Montana</option>
+                                    <option>Nebraska</option>
+                                    <option>Nevada</option>
+                                    <option>New Hampshire</option>
+                                    <option>New Jersey</option>
+                                    <option>New Mexico</option>
+                                    <option>New York</option>
+                                    <option>North Carolina</option>
+                                    <option>North Dakota</option>
+                                    <option>Ohio</option>
+                                    <option>Oklahoma</option>
+                                    <option>Oregon</option>
+                                    <option>Pennsylvania</option>
+                                    <option>Rhode Island</option>
+                                    <option>South Carolina</option>
+                                    <option>South Dakota</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Utah</option>
+                                    <option>Vermont</option>
+                                    <option>Virginia</option>
+                                    <option>Washington</option>
+                                    <option>West Virginia</option>
+                                    <option>Wisconsin</option>
+                                    <option>Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- radio checks -->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Subject</label>
+                        <div class="col-md-9">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="subject" value="writing" /> I'm interested in writing for {{getSiteName}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="subject" value="product" /> I have a question about a product
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="subject" value="other" /> Other
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text area -->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Message</label>
+                        <div class="col-md-9 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <textarea class="form-control" required name="message" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-xs-12 col-md-3"></label>
+                        <div class="col-xs-6 col-md-3">
+                            <button id="submit-button" type="submit" class="btn btn-warning">Send
+                                <span class="glyphicon glyphicon-send"></span>
+                            </button>
+                            <br />
+                            <br />
+                        </div>
+
+                        <!-- Google Recaptcha -->
+                        <div class="col-xs-12 col-sm-6">
+                            <!--<div class="g-recaptcha pull-right" data-sitekey="6Lf88hgUAAAAAGcnNkqqSMS4ABK6gvcGJILdASRr" data-size="compact" data-callback="enableBtn"></div>-->
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback" data-sitekey="6Lf88hgUAAAAAGcnNkqqSMS4ABK6gvcGJILdASRr"></div>
+                                <input type="hidden" class="form-control" data-recaptcha="true" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </fieldset>
+            </form>
+            {{/orCond}}
+        </div>
+    </div>
+    <!-- /.container -->
+
+
+
+</div>
+<!--end-->
+</div>
+
+<!-- Footer Content-->
+{{> page/footer}}
+
+<script>
+    //https://github.com/1000hz/bootstrap-validator/issues/202
+    var originalInputSelector = $.fn.validator.Constructor.INPUT_SELECTOR
+    $.fn.validator.Constructor.INPUT_SELECTOR = originalInputSelector + ', input[data-recaptcha]'
+
+    window.verifyRecaptchaCallback = function (response) {
+    $('input[data-recaptcha]').val(response).trigger('change')
+    }
+
+    window.expiredRecaptchaCallback = function () {
+    $('input[data-recaptcha]').val("").trigger('change')
+    }
+
+    $('form[data-toggle="validator"]')
+    .validator({
+        custom: {
+        recaptcha: function ($el) {
+            if (!$el.val()) {
+            return "Please complete the captcha"
+            }
+        }
+        }
+    })
+</script>

@@ -1,0 +1,84 @@
+version: '3.8'
+
+services: 
+  db:
+    container_name: db
+    image: mysql:5.7.26
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: 
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+      - ../misc/dumps/Dump20210822.sql:/docker-entrypoint-initdb.d/dump.sql
+    networks:
+      - canopy-network   
+
+  app:
+    depends_on:
+      - db
+    container_name: app
+    restart: unless-stopped
+    image: canopy-node
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    environment:
+      URL: ${URL}
+      DB_HOST: db
+      DB_DATABASE: canopy
+      DB_USER: root
+      DB_PASSW: Canopy-123
+      DB_CONNECTION_LIMIT: 3
+      EMAIL_USER: 
+      EMAIL_PASSW: 
+      EMAIL_SECRET_KEY: 
+      NODE_ENV: production
+      PORT: 8081
+    ports:
+      - "8081"
+    networks:
+      - canopy-network
+
+  reverse-proxy:
+    container_name: reverse-proxy
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: Dockerfile_rev_proxy
+      args:
+        URL: ${URL}    
+    image: canopy-nginx 
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot  
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      URL: ${URL}
+      
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    networks:
+      - canopy-network     
+
+  certbot:
+    image: certbot/certbot
+    restart: unless-stopped    
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+networks:
+  canopy-network:
+
+volumes: 
+  db-config:
+  db-data:
+  nginx-certs:
+  nginx-vhost:
+  nginx-html:
+  nginx-docker-sock:  

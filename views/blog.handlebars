@@ -1,0 +1,135 @@
+{{#section 'head'}}
+    <!-- Custom CSS -->
+    <link href="/assets/css/clean-blog.css" rel="stylesheet">
+
+    <!-- Pagination canoical tags -->
+    <link id="canonical-previous" rel="previous" href="{{url}}{{getCanonicalUrl category previous_page}}" />
+    <link id="canonical-next" rel="next" href="{{url}}{{getCanonicalUrl category next_page}}" />
+    <link id="canonical" rel="canonical" href="{{url}}{{getCanonicalUrl category selected_page}}" />
+{{/section}}
+
+<!-- Navigation -->
+{{> page/nav/nav}}
+
+<div itemscope itemtype="http://schema.org/Blog">
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header blog-pic" style="background-image: url('{{img}}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1 itemprop="name">Canopy Tent Blog</h1>
+                        <hr class="small">
+                        <span class="subheading" itemprop="headline">{{description}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+
+            <div id="sidebar-wrapper-blog">
+                <nav>
+                    <ul class="nav nav-pills nav-stacked sidebar-nav">
+                        
+                        {{#if categories}}
+                        <li class="sidebar-brand"><span>Categories</span></li>
+                        <li>
+                            <a href="/blog" class="no-padding">
+                                <p class="no-margin">All</p>
+                            </a>
+                        </li>     
+                        <li class="nav-divider"></li>               
+                        {{/if}}
+                        {{#each categories}}
+                            <li>
+                                <a href="/category/{{this}}" class="no-padding">
+                                    <p class="no-margin">{{this}}</p>
+                                </a>
+                            </li>                        
+                        {{/each}}
+                                            
+                    </ul>
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+
+            <!--Main Content-->
+            <div class="col-md-10 col-md-offset-2 min-height-500">
+                {{#each blogposts}}
+                    <div class="post-preview">
+                        <a href="/blog/{{this.POSTID}}">
+                            <h2 class="post-title">
+                                {{ this.TITLE }}
+                            </h2>
+                            <h3 class="post-subtitle">
+                                {{ this.SUBTITLE }}
+                            </h3>
+                        </a>
+                        <p class="post-meta">Posted by <span>{{ this.AUTHOR }}</span> on <span>{{ this.DATE }}</span></p>
+                        <hr/>
+                    </div>
+                {{/each}}
+            </div><!--End Main Content-->
+
+        </div><!-- /Row-->
+        
+        <!-- pagination-->
+        <div class="row">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-end">
+                    
+                    <li class="page-item" id="previous-button">
+                        <a class="page-link" href="{{getCanonicalUrl path previous_page}}" tabindex="-1">Previous</a>
+                    </li>
+                    {{#each pages}}
+                        <li class="page-item" id="pagenum{{this}}"><a class="page-link" href="{{getCanonicalUrl ../path this}}">{{this}}</a></li>
+                    {{/each}}
+                    <li class="page-item" id="next-button">
+                        <a class="page-link" href="{{getCanonicalUrl path next_page}}">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- /Row-->
+    </div><!-- /Page Content -->
+
+
+</div>
+
+<!-- Footer Content-->
+{{> page/footer}}
+
+<script>
+    window.onload = function() {
+        //update canonical and disabled pages
+        if({{selected_page}} == 1){
+            $("#previous-button").addClass("disabled");
+            $("#previous-button a").click(function() {
+                return false;
+            });
+            $("#canonical-previous").remove();
+        }
+        else{
+            $("#previous-button").removeClass("disabled");
+        }
+        if({{selected_page}} == {{pages.length}}){
+            $("#next-button").addClass("disabled");
+            $("#next-button a").click(function() {
+                return false;
+            });
+            $('#canonical-next').remove();
+        }
+        else{
+            $("#next-button").removeClass("disabled");
+        }
+
+        //set active page
+        $("#pagenum"+ {{selected_page}}).addClass("active");
+    }
+</script>

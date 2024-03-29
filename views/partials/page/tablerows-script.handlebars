@@ -1,0 +1,7 @@
+<script>
+    $( document ).ready(function() {
+        $('#clickable-container').on('click', '.clickable-row', function() {
+            window.location = $(this).data("url");
+        });
+    });
+</script>

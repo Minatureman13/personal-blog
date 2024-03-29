@@ -1,0 +1,27 @@
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container" id="home">
+        
+        <!-- logo -->
+        {{> page/nav/logo}}
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-target">
+            <ul class="nav navbar-nav">
+                {{> page/nav/categories}}
+                <li>
+                    <a href="/brands">Brands</a>
+                </li>
+                <li>
+                    <a href="/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="/canopy-tent-buying-guide">Buying Guide</a>
+                </li>                
+            </ul>
+
+            <!-- social media -->
+            {{> page/nav/social-media}}
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /Nav container -->
+</nav>

@@ -1,0 +1,646 @@
+[
+    {
+        "@context": "http://schema.org",
+        "@type":
+        [
+            "Article"
+        ],
+        "headline": "Best Canopy Tents - 2023",
+        "datePublished": "2023-02-26T14:00:00-04:00",
+        "dateModified": "2023-02-26T14:00:00-04:00",
+        "author":
+        [
+            {
+                "@type": "Person",
+                "name": "Paul Mooner"
+            }
+        ],
+        "description": "Canopy Tents create shade and protection from rain and dangerous UV rays. We researched so you can get the best quality for your dollar.",
+        "image":
+        {
+            "@type": "ImageObject",
+            "url": "https://canopytentreviews.com/img/best-canopy-tents.jpg"
+        },
+        "publisher":
+        {
+            "@type": "Organization",
+            "name": "Canopy Tent Reviews",
+            "url": "https://canopytentreviews.com",
+            "logo":
+            {
+                "@type": "ImageObject",
+                "url": "https://canopytentreviews.com/img/canopy_logo.png"
+            },
+            "brand": "Canopy Tent Reviews"
+        },
+        "articleSection": "Reviews",
+        "keywords":
+        [
+            "Canopy Tent Reviews",
+            "Pop Up Canopy Reviews"
+        ],
+        "mainEntityOfPage":
+        {
+            "@type":
+            [
+                "WebPage"
+            ],
+            "@id": "https://canopytentreviews.com",
+            "breadcrumb":
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement":
+                [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item":
+                        {
+                            "@id": "https://canopytentreviews.com",
+                            "name": "Canopy Tent Reviews"
+                        }
+                    }
+                ]
+            },
+            "reviewedBy":
+            [
+                {
+                    "@type": "Person",
+                    "name": "Mark Kozinski",
+                    "description": "Mark Kozinski is a fact checker and editor with a background in envrionmental engineering. Mark holds a BS from Penn State University.",
+                    "jobTitle": "Fact Checker",
+                    "knowsAbout":
+                    [
+                        "Camping",
+                        "Weddings"
+                    ],
+                    "alumniOf":
+                    [
+                        {
+                            "@type": "Organization",
+                            "Name": "Penn State University"
+                        }
+                    ]
+                }
+            ],
+            "lastReviewed": "2023-02-26T14:00:00-04:00"
+        },
+        "about":
+        [
+            {
+                "@context": "http://schema.org",
+                "@type": "ItemList",
+                "name": "Best Canopy Tents of 2023",
+                "description": "Canopy Tents create shade and protection from rain and dangerous UV rays while outside. We researched the best picks so you can get quality for your dollar.",
+                "itemListOrder": "http://schema.org/ItemListUnordered",
+                "numberOfItems": 9,
+                "itemListElement":
+                [
+                    {
+                        "@type": "Product",
+                        "url": "https://www.canopytentreviews.com/#ABC-Canopy",
+                        "name": "King Kong 10x10 Heavy Duty Instant Canopy",
+                        "image": "https://uploads-ssl.webflow.com/6400c386f7684a26763fbc06/64013f195e06312cf2bd7962_abccanopy-10x10-gazebo-p-500.webp",
+                        "review":
+                        {
+                            "author":
+                            [
+                                {
+                                    "@type": "Person",
+                                    "name": "Paul Mooner",
+                                    "description": "Paul Mooner is a product reviewer for Canopy Tent Reviews."
+                                }
+                            ],
+                            "reviewRating":
+                            {
+                                "@type": "Rating",
+                                "ratingValue": "4.8",
+                                "worstRating": 0,
+                                "bestRating": 5
+                            },
+                            "positiveNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "The Gold Standard in Canopy Tents"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Heavy Duty Frame Construction"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Easy Assembly and Setup"
+                                    }
+                                ]
+                            },
+                            "negativeNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Portability"
+                                    }
+                                ]
+                            }
+                        },
+                        "brand":
+                        {
+                            "@type": "Brand",
+                            "name": "ABC Canopy"
+                        },
+                        "description": "ABCCanopy is the gold standard thanks to endless color options and unmatched quality. The heavy-duty frame and waterproof canopy helped to earn the title of best overall canopy tent on the market.",
+                        "award": "Best Overall"
+                    },
+                    {
+                        "@type": "Product",
+                        "url": "https://www.canopytentreviews.com/#Eurmax-10x10",
+                        "name": "Basic 10x10 Pop Up Commercial Canopy",
+                        "image": "https://uploads-ssl.webflow.com/6400c386f7684a26763fbc06/640117478f9da8763f3e0252_eurmax-10x10-heavy-duty-canopy-tent.webp",
+                        "review":
+                        {
+                            "author":
+                            [
+                                {
+                                    "@type": "Person",
+                                    "name": "Paul Mooner",
+                                    "description": "Paul Mooner is a product reviewer for Canopy Tent Reviews."
+                                }
+                            ],
+                            "positiveNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Easy Sidewall Attachments"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Smooth Gliding Eurmax Roller Bag"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Durability"
+                                    }
+                                ]
+                            },
+                            "negativeNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Portability"
+                                    }
+                                ]
+                            }
+                        },
+                        "brand":
+                        {
+                            "@type": "Brand",
+                            "name": "Eurmax"
+                        },
+                        "description": "Eurmax is one of the most affordable cross-truss canopy frames on our list, and is our pick for best value because it offers uncompromising quality at a reasonable price.",
+                        "award": "Best Value"
+                    },
+                    {
+                        "@type": "Product",
+                        "url": "https://canopytentreviews.com/#Core-Equipment",
+                        "name": "Basic 10x10 Pop Up Commercial Canopy",
+                        "image": "https://uploads-ssl.webflow.com/6400c386f7684a26763fbc06/640140a72b44b811c3c674cf_core-equipment-pop-up-canopy.webp",
+                        "review":
+                        {
+                            "author":
+                            [
+                                {
+                                    "@type": "Person",
+                                    "name": "Paul Mooner",
+                                    "description": "Paul Mooner is a product reviewer for Canopy Tent Reviews."
+                                }
+                            ],
+                            "positiveNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "2 Minute Assembly"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "UV and Water Resistant Technology"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Canopy Color That Keeps You Cool"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 4,
+                                        "name": "Affordable"
+                                    }                                    
+                                ]
+                            },
+                            "negativeNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Ease of Use"
+                                    }
+                                ]
+                            }
+                        },
+                        "brand":
+                        {
+                            "@type": "Brand",
+                            "name": "Core"
+                        },
+                        "description": "This shelter is the best pyramid-framed canopy on the market, and is our pick for best beach canopy tent. It's durable, stylish design and ease-of-use features, the Core offers great bang for your buck.",
+                        "award": "Best Beach Canopy"
+                    },
+                    {
+                        "@type": "Product",
+                        "url": "https://canopytentreviews.com/#Leader-Accessories",
+                        "name": "Instant Pop Up Straight Legged Canopy",
+                        "image": "https://uploads-ssl.webflow.com/6400c386f7684a26763fbc06/6401427d0e3063c522caca92_leader-accessories-portable-camping-gazebo.webp",
+                        "review":
+                        {
+                            "author":
+                            [
+                                {
+                                    "@type": "Person",
+                                    "name": "Paul Mooner",
+                                    "description": "Paul Mooner is a product reviewer for Canopy Tent Reviews."
+                                }
+                            ],
+                            "positiveNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Affordable"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Easy Campground Setup"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Mesh Panels for Mosquuito Protection"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 4,
+                                        "name": "Cabin Tent"
+                                    }
+                                ]
+                            },
+                            "negativeNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Not great for rain or wind"
+                                    }
+                                ]
+                            }
+                        },
+                        "brand":
+                        {
+                            "@type": "Brand",
+                            "name": "Leader Accessories"
+                        },
+                        "description": "The least expensive shelter on our list, Leader Accessories is our pick for the best best camping canopy. Equipped with 50+ UV protection, a solid one-piece frame, and a vented top canopy, it features high-quality construction that will stand up to a weekend in the woods.",
+                        "award": "Best Camping Canopy"
+                    },
+                    {
+                        "@type": "Product",
+                        "url": "https://canopytentreviews.com/#EZ-Up-Envoy",
+                        "name": "Envoy Instant Shelter Canopy 10x10",
+                        "image": "https://uploads-ssl.webflow.com/6400c386f7684a26763fbc06/6401433f81fc6247b23e60d4_best-ez-up-canopy.webp",
+                        "review":
+                        {
+                            "author":
+                            [
+                                {
+                                    "@type": "Person",
+                                    "name": "Paul Mooner",
+                                    "description": "Paul Mooner is a product reviewer for Canopy Tent Reviews."
+                                }
+                            ],
+                            "positiveNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "New and Improved Aluminum Frame"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Improved EZ Up Roller Bags"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Affordability"
+                                    }
+                                ]
+                            },
+                            "negativeNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Water resistant but not waterproof"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Durability"
+                                    }
+                                ]
+                            }
+                        },
+                        "brand":
+                        {
+                            "@type": "Brand",
+                            "name": "EZ-Up"
+                        },
+                        "description": "The quickest to set up and the lightest canopy on our list, the EZ-Up Envoy is our pick for the best tailgating tent. This tent takes the title of &quot;most stereotypical blue canopy tent&quot; to a whole new level.",
+                        "award": "Best Tailgating Tent"
+                    },
+                    {
+                        "@type": "Product",
+                        "url": "https://canopy-tents.webflow.io/#Coleman",
+                        "name": "10x10 Instant Sun Shelter",
+                        "image": "https://uploads-ssl.webflow.com/6400c386f7684a26763fbc06/64016c0fc4eefe4123adeed7_best-10x10-coleman-canopy-tent.webp",
+                        "review":
+                        {
+                            "author":
+                            [
+                                {
+                                    "@type": "Person",
+                                    "name": "Paul Mooner",
+                                    "description": "Paul Mooner is a product reviewer for Canopy Tent Reviews."
+                                }
+                            ],
+                            "positiveNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Easy Setup with Comfort Grips"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Coleman Shade Technology"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Affordability"
+                                    }
+                                ]
+                            },
+                            "negativeNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Protection"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Durability"
+                                    }                                    
+                                ]
+                            }
+                        },
+                        "brand":
+                        {
+                            "@type": "Brand",
+                            "name": "Coleman"
+                        },
+                        "description": "This Coleman tent has an appealing aesthetic and is very easy to use. Cheaper than the Core, the Coleman is our recommendation for the best backyard canopy.",
+                        "award": "Best Backyard Pop Up Tent"
+                    },
+                    {
+                        "@type": "Product",
+                        "url": "https://canopytentreviews.com/#EZ-Up-Sierra-II",
+                        "name": "Sierra 12x12 Instant Slant Leg Canopy",
+                        "image": "https://uploads-ssl.webflow.com/6400c386f7684a26763fbc06/64016c0f3e11704e312ab471_ez-up-sierra-12x12-pop-up.webp",
+                        "review":
+                        {
+                            "author":
+                            [
+                                {
+                                    "@type": "Person",
+                                    "name": "Paul Mooner",
+                                    "description": "Paul Mooner is a product reviewer for Canopy Tent Reviews."
+                                }
+                            ],
+                            "positiveNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "A Grandiose 12x12 Frame"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Lightweight"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Portable"
+                                    }
+                                ]
+                            },
+                            "negativeNotes":
+                            {
+                                "@type": "ItemList",
+                                "itemListElement":
+                                [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Durability"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Large footprint"
+                                    }
+                                ]
+                            }
+                        },
+                        "brand":
+                        {
+                            "@type": "Brand",
+                            "name": "EZ-Up"
+                        },
+                        "description": "This slant leg EZ-Up delivers consistent performance whether it be at the beach, a festival, or the backyard. The large frame it ideal for parties, and it's our pick for best 12x12 pop up canopy.",
+                        "award": "Best Canopy For Large Outdoor Events"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity":
+                [
+                    {
+                        "@type": "Question",
+                        "name": "How many people does a 10x10 pop up tent cover?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "The 10x10 pop up is the most popular canopy size because they are affordable, small enough to be carried by one person, yet big enough to shade up to 6 people. Smaller 5x5 and 8x8 canopies are even more portable but only shade 1 or 2 people. 12x12 and 10x15 tents are popular for backyard barbecues since they are heavier and cover up to 10 chairs. 10x20 tents are common for commercial events like weddings, tradeshows, and street vendors and can shade up to 15 people."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is a straight leg or slant leg canopy tent better?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "Straight leg tents are far more durable and have better structural integrity than slant leg canopies. Manufacturers of commercial-grade canopies rarely make slant leg tents for this reason. Straight leg tents resist rotational pressure better, especially ones with cross truss frames which is something you won't find on angled leg canopies. Cheap recreational tents under $100 often have slanted legs because they require less material to make and as a result can be marketed at a lower price."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do you anchor an outdoor canopy to keep it from blowing away?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "Deciding on the type of weights to use for a pop up canopy tent depends on the type of surface it will be on. Sandbags are typically the most effective way to secure a pop up tent while at the beach so you won't have to transport the weight. Tie-downs with guy lines and ground stakes are a great option for grass and backyard anchoring. Weighted plates that slide onto the tent's steel feet are recommended for hard surfaces like decks, patios, or parking lots."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much weight is needed to hold down a pop up canopy?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "For a 10x10 canopy, we generally advise 4 lbs of weight for every 1 mph of wind. So in 10 mph winds, 40 lbs of weight or 10 lbs on each leg should be sufficient to safely keep your canopy tent anchored. For anchor bags that can be filled with sand or rocks, we recommend filling the bag to the top as they are designed to contain the exact amount of weight needed to keep your tent safely grounded. We always recommend anchoring your canopy with one of these methods regardless of wind speeds."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Are all canopies waterproof to protect from rain?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "The majority of canopy tents are water resistant, not waterproof. Most canopy tents use a denier polyester which is not a waterproof fabric as water can pass between the threads, regardless of the thread count or thickness. However, some brands like ABCCanopy and Eurmax apply a waterproof coating over the polyester and heat seal the seams to make them waterproof."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What materials are used in a pop up tent?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "Canopy frames are typically made of steel with a powder-coated finish to prevent rusting and corrosion. Aluminum frames are not popular because aluminum is a softer metal than steel and prone to easily bending. The canopy fabric is typically made with denier polyester having anywhere between a 200-600 thread count. This material is popular in many outdoor gear products because it is durable and tough, yet more affordable than nylon."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can one person put up a canopy?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "Yes, one person can assemble and set up most 10x10 canopy tents by themselves. However, we have found that over time this tends to cause more stress on the joints as one person does more pulling and shaking of the frame in order to lock it into position. This might cause the plastic truss connectors to weaken quicker than normal or even worse snap, so we always advise having a helping hand whenever possible."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What color canopy is the coolest?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "Believe it or not, a black canopy tent will keep you just as cool as a white one! Darker colors might be warmer to the touch as they absorb more heat while lighter colors reflect more light, but the temperature underneath will remain the same for both. Overall we still prefer lighter-colored tents because they keep the tent brighter underneath the tent as opposed to darker colors."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can you leave a pop up canopy up overnight?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "Leaving your canopy tent up will almost certainly reduce the life of the shelter. Most canopy tents can withstand up to 30 mph winds, but a sudden passing storm can easily bend or snap the frame, a falling branch can tear a hole in the canopy fabric, and prolonged sunlight can cause your fabric to lose its sheen due to sun wash. For these reasons we highly recommend placing your pop up canopy tent back into their carry bag after each use."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much do 10x10 canopies cost?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "We see there being three different pricing tiers: value tents, recreational tents, and heavy-duty tents. Value tents are often under $80 and include brands like Ozark Trail, ZShade, and Yaheetech. Recreational tents are often under $150 and include brands like EZ Up, Coleman, Crown Shades, and Quest. Heavy-duty tents often cost between $150-$250 and include brands like ABCCanopy, Eurmax, and MasterCanopy."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much do pop up canopy tents weigh?",
+                        "acceptedAnswer":
+                        {
+                            "@type": "Answer",
+                            "text": "The average weight of a 10x10 canopy tent is about 40lbs, however, there are a number of factors that can affect weight. Slant leg tents are typically around 30 lbs. because the canopy is smaller and uses less material. Heavy-duty cross truss frames are typically made of thicker steel than pyramid-style canopies and weigh about 50lbs on average."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

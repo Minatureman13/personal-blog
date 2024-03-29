@@ -1,0 +1,16 @@
+<div class="col-md-3">
+    <div id="sidebar-wrapper-blog">
+        <nav>
+            <ul class="nav nav-pills nav-stacked sidebar-nav">
+                <li class="sidebar-brand"><span>Latest Blog Posts</span></li>
+                {{#each latestblogs}}
+                <li>
+                    <a href="/blog/{{this.POSTID}}" class="no-padding">
+                            <img class="center-cropped img-rounded" src="{{this.BACKGROUNDIMGURL}}" alt="{{this.TITLE}}" /> <p class="no-margin">{{this.TITLE}}</p>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
+    </div>
+</div>

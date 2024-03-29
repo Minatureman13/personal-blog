@@ -1,0 +1,221 @@
+{{#section 'head'}}
+    <!-- Custom CSS -->
+    <link href="/assets/css/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom JavaScript -->
+    <script src="/assets/js/jasny-bootstrap.js"></script>
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="oFNqyi-mgkTIhXtecFeUz2lsMqUiekcMwVxup4egUKY" />
+    
+{{/section}}
+
+
+<!-- Navigation -->
+{{> page/nav/nav}}
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+
+        <!-- Sidebar -->
+
+        <div id="sidebar-wrapper">
+            <nav id="scrollspy-target">
+                <ul class="nav nav-pills nav-stacked sidebar-nav">
+                    <li class="sidebar-brand"><span>Navigation</span></li>
+                    <li><a href="#home" rel="nofollow">Home</a></li>
+                    <li><a href="#comparison" rel="nofollow">Comparison Table</a></li>
+                    <li><a href="#reviews" rel="nofollow">Reviews</a></li>
+                    
+                    {{#if blogposts}}
+                    <li class="nav-divider"></li>
+                    <li class="sidebar-brand"><span>Latest Blog Posts</span></li>
+                    {{/if}}
+                    {{#each blogposts}}
+                        <!--<li style="font-size: 11.5px"><a href="/blog/{{this.POSTID}}">{{this.TITLE}}</a></li>-->
+                        <li>
+                            <a href="/blog/{{this.POSTID}}" class="no-padding">
+                                    <img class="center-cropped img-rounded" src="{{this.BACKGROUNDIMGURL}}" alt="{{this.TITLE}}" /> <p class="no-margin">{{this.TITLE}}</p>
+                            </a>
+                        </li>                        
+                    {{/each}}
+                                        
+                </ul>
+            </nav>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Main Content-->
+        <div class="col-md-9 col-md-offset-3">
+            <meta itemprop="author" itemscope itemtype="http://schema.org/Person" content="Kenneth Huebsch" />
+            <meta itemprop="author" itemscope itemtype="http://schema.org/Person" content="Eric Schroeder" />
+
+            
+            <!-- Jumbotron Title-->
+            <div class="jumbotron">
+                <h1>Best {{producttype.TITLE}}</h1>
+                <h3>Reviews and Buying Guide</h3>
+            </div>
+
+            <!-- Introduction Picture and Paragraph-->
+            <div>
+                <div class="col-lg-6 col-md-12 intro-margin">
+                    <img itemprop="primaryImageOfPage" src="{{producttype.PICTURE}}" alt="{{producttype.SECONDARYKW}}" class="img-rounded full-width" />
+                </div>
+                <div>{{{producttype.INTRO}}}</div>
+            </div>
+            <hr/>
+            
+            <!-- Comparison Table Header-->
+            <div id="comparison">
+                <!--Header Text-->
+                <div>
+                    <h2>Best {{producttype.SECONDARYKW}} Reviews
+                        <br/>
+                        <small>Summarized Comparison Table</small>
+                    </h2>
+                </div>
+            </div>
+            
+            <!-- Comparison Table-->
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>{{producttype.TITLE}}</th>
+                            <th class="hidden-xs">Review</th>
+                            <th>Price</th>
+                            <th class="hidden-xs">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody data-link="row" class="rowlink">
+                        {{#each reviews}}
+                            <tr itemscope itemtype="http://schema.org/Product">
+                                <td>{{this.RANK}}</td>
+                                <td class="col-sm-4">
+                                    <a class="anchorjs-link" href="#review{{this.ID}}" rel="nofollow">
+                                        <span itemprop="brand" itemscope itemtype="http://schema.org/Brand"><strong itemprop="name">{{ this.BRAND }}</strong></span> 
+                                        <span> - </span>
+                                        <span itemprop="name">{{ this.NAME }}</span>
+                                        <br/>
+                                        <img class="img-rounded img-comparison" src="{{this.IMGURL}}" alt="{{this.BRAND}} - {{this.NAME}}" itemprop="image">
+                                    </a>
+                                </td>
+                                <td class="hidden-xs">
+                                    <p itemprop="description">{{{ this.REVIEW }}}</p>
+                                </td>
+                                <td class="rowlink-skip">
+                                    <a href="#review{{this.ID}}" class = "hidden-link" rel="nofollow">
+                                        <p class="no-margin">
+                                            Click to see latest price
+                                        </p>
+                                        <br/>
+                                    </a><!--Make the price text part of the product link-->
+                                    <a href="#review{{this.ID}}" class = "col-xs-12 visible-xs height-25" rel="nofollow"></a><!--This fills the white space with a link-->
+                                    <a href="{{this.AMZURL}}" itemprop="url" target="_blank">
+                                        <img src="/img/available-on-amazon.png" alt="Purchase from Amazon button" class="amzbutton">
+                                    </a>
+                                    <a href="#review{{this.ID}}" class = "col-xs-12 hidden-xs height-100" rel="nofollow"></a><!--This fills the white space with a link-->
+                                </td>
+                                <td class="hidden-xs">
+                                    <span itemprop="review" itemscope itemtype="http://schema.org/Review">
+                                        <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                            <span itemprop="ratingValue">{{ this.RATING }}</span>/<span>5</span>
+                                        </span>
+                                        <meta itemprop="author" content="Eric Schroeder"/>
+                                    </span>
+                                    <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                    	<meta itemprop="ratingValue" content="{{ this.RATING }}"/>
+                                        <meta itemprop="ratingCount" content="1"/>
+                                    </span>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Products on Amazon-->
+            <div class="text-centered">
+            <a href="{{producttype.AMAZONURL}}" class="no-decor" rel="nofollow" target="_blank">
+                <button type="button" class="btn btn-primary btn-lg btn-block">
+                    See Best Sellers on Amazon
+                </button>
+            </a>
+            </div>
+
+            <hr/>
+
+            <!-- Header for Reviews Section-->
+            <div id="reviews">
+                <h2>{{slice producttype.TITLE}} Reviews
+                    <br />
+                    <small>Detailed Reviews</small>
+                </h2>
+            </div>
+
+            <!-- Reviews-->
+            <div>
+                <!-- Products-->
+                <table class="table">
+                    <tbody>
+                        {{#each reviews}}
+                            <tr>
+                                <td>
+                                    <h3>
+                                        <a class="anchor" id="review{{this.ID}}"></a>
+                                        <span>{{ this.BRAND }}</span> 
+                                        <span> - </span>
+                                        <span class="grey-title">{{ this.NAME }}</span>
+                                    </h3>
+                                    <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <a href="{{this.AMZURL}}" class="thumbnail no-border" rel="nofollow" target="_blank">
+                                            <img src="{{this.IMGURL}}" alt="{{this.BRAND}} - {{this.NAME}}">
+                                        </a>
+                                    </div>
+                                    </div>
+
+                                    <div>{{{this.FULLREVIEW}}}</div>
+
+                                    <!-- See on Amazon Button -->
+                                    <div class="text-center">
+                                        <a href="{{this.AMZURL}}" rel="nofollow" target="_blank">
+                                            <button type="button" class="btn btn-primary btn-lg">See Latest Price on Amazon</button>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div><!-- /Reviews-->                   
+        </div><!-- /Main Conent-->               
+    </div><!-- /Row-->
+</div>
+
+<!-- Footer Content-->
+<div class="container">
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-xs-6">
+                <p>{{getSiteName}} &copy; {{getYear}}</p>
+            </div>
+            <div class="col-xs-6">
+                <a href="/contact" rel="nofollow"><div class="pull-right footer-links">Contact Us</div></a>
+                <a href="/disclaimer" rel="nofollow"><div class="pull-right footer-links">Disclaimer</div></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script>
+    document.body.setAttribute("data-spy","scroll");
+    document.body.setAttribute("data-target","#scrollspy-target");
+    document.body.setAttribute("data-offset","100");
+</script>
